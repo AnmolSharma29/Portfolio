@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: #131313;
+    height: 97vh;
+}
+.main-area{
+    height: 94vh;
+    width: 80vw;
+    margin: 20px auto;
+    display: grid;
+    gap: 10px;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "github github about-me about-me about-me about-me experience experience"
+    "github github about-me about-me about-me about-me experience experience"
+    "projects projects anmol anmol anmol anmol experience experience"
+    "projects projects anmol anmol anmol anmol skills skills"
+    "projects projects anmol anmol anmol anmol skills skills"
+    "projects projects anmol anmol anmol anmol skills skills"
+    "resume resume resume contact contact contact social social"
+    "resume resume resume contact contact contact social social";
+}
+.grid{
+    border: 1px #171719 solid;
+    border-radius: 20px;
+    background-color: #171719;
+}
+.grid-hover:hover{
+    border: 1px #787878 solid;
+    border-radius: 20px;
+}
+#github { 
+    grid-area: github;
+    position: relative;
+    overflow: hidden !important;
+}
+.github-img{
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    overflow: clip;
+    -webkit-user-drag: none;
+}
+#about-me { 
+    grid-area: about-me; 
+}
+#experience { 
+    grid-area: experience;
+}
+#anmol { 
+    grid-area: anmol;
+}
+#skills { 
+    grid-area: skills;
+}
+#projects { 
+    grid-area: projects;
+}
+#resume {
+    grid-area: resume;
+    border: 1px solid #301661;
+    background-color: #301661;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+#resume:hover {
+    border: 1px solid #787878;
+}
+.resume-img{
+    align-items: center;
+    justify-content: baseline;
+    overflow: clip;
+    -webkit-user-drag: none;
+}
+#contact {
+    grid-area: contact;
+}
+#social{
+    grid-area: social;
+    display: grid;
+    gap: 5px;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "insta linkedin"
+    "twitter fiverr";
+}
+.social-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+.social-item:hover{
+    border: 1px white solid;
+    border-radius: 1rem;
+}
+.fill-div {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+#insta { 
+    grid-area: insta;
+}
+#linkedin { 
+    grid-area: linkedin;
+
+}
+#twitter {
+    grid-area: twitter;
+
+}
+#fiverr {
+    grid-area: fiverr;
+
+}
