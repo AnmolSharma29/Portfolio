@@ -1,5 +1,8 @@
 *{
     margin: 0px;
+    font-family: "Roboto", system-ui;
+    font-style: normal;
+    color: white;
 }
 body{
     background-color: #131313;
@@ -28,12 +31,34 @@ body{
     border: 1px #171719 solid;
     border-radius: 20px;
     background-color: #171719;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px 0px 15px;
 }
 .grid-hover:hover{
-    border: 1px #787878 solid;
+    border: 1px #313131 solid;
     border-radius: 20px;
 }
-#github { 
+hr{
+    border-top: 2px solid;
+    border-radius: 50%;
+    border-image: linear-gradient(to right, #224c56 0%, #5529A6 100%) 1;
+    width: 70px;
+    margin: 10px 0px;
+}
+h3{
+    font-size: 25px;
+}
+h3::selection {
+    color: white;
+    background: #5529A6;
+}
+p::selection{
+    color: white;
+    background: #5529A6;
+}
+#github{ 
     grid-area: github;
     position: relative;
     overflow: hidden !important;
@@ -45,8 +70,24 @@ body{
     overflow: clip;
     -webkit-user-drag: none;
 }
+.github-logo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: inherit;
+    -webkit-user-drag: none;
+}
+.github-text{
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+}
 #about-me { 
-    grid-area: about-me; 
+    grid-area: about-me;
+    font-size: 1rem;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 #experience { 
     grid-area: experience;
@@ -65,20 +106,61 @@ body{
     border: 1px solid #301661;
     background-color: #301661;
     overflow: hidden;
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 #resume:hover {
     border: 1px solid #787878;
 }
 .resume-img{
-    align-items: center;
-    justify-content: baseline;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
     overflow: clip;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.resume-text{
+    position: absolute;
+    top: 0%;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(680%);
+    left: 5%;
+}
+.resume-gradient{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+#resume:hover .resume-text{
+    top: 0%;
+    transform: translateY(385%);
+    animation-duration: 0.5s;
+}
+.resume-img img{
+    border-radius: 20px 20px 0px 0px;
+    width: inherit;
     -webkit-user-drag: none;
 }
 #contact {
     grid-area: contact;
+}
+#phone{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+#phone-text{
+    border-left: 2px solid;
+    height: 100%;
+    border-image: linear-gradient(to bottom, #224c56 0%, #5529A6 100%) 1;
+    padding-left: 10px;
+}
+#mail{
+    border-left: 2px solid;
+    border-image: linear-gradient(to bottom, #224c56 0%, #5529A6 100%) 1;
 }
 #social{
     grid-area: social;
@@ -92,13 +174,14 @@ body{
     "twitter fiverr";
 }
 .social-item{
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
+    background-color: #171719;
 }
 .social-item:hover{
-    border: 1px white solid;
+    border: 1px #313131 solid;
     border-radius: 1rem;
 }
 .fill-div {
@@ -119,5 +202,4 @@ body{
 }
 #fiverr {
     grid-area: fiverr;
-
 }
