@@ -3,6 +3,7 @@
     font-family: "Roboto", system-ui;
     font-style: normal;
     color: white;
+    text-decoration: none;
 }
 body{
     background-color: #131313;
@@ -34,7 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 15px 0px 15px;
+    padding: 15px;
 }
 .grid-hover:hover{
     border: 1px #313131 solid;
@@ -50,11 +51,7 @@ hr{
 h3{
     font-size: 25px;
 }
-h3::selection {
-    color: white;
-    background: #5529A6;
-}
-p::selection{
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, img::selection{
     color: white;
     background: #5529A6;
 }
@@ -89,8 +86,37 @@ p::selection{
     padding-left: 30px;
     padding-right: 30px;
 }
+#about-me p{
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 #experience { 
     grid-area: experience;
+}
+#expr-data{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.data p{
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+.data h5{
+    font-size: 0.8rem;
+    color: #9747FF;
 }
 #anmol { 
     grid-area: anmol;
@@ -107,6 +133,7 @@ p::selection{
     background-color: #301661;
     overflow: hidden;
     position: relative;
+    padding: 15px 15px 0px 15px;
 }
 #resume:hover {
     border: 1px solid #787878;
@@ -121,6 +148,7 @@ p::selection{
     align-items: flex-end;
 }
 .resume-text{
+    color: #73cee5;
     position: absolute;
     top: 0%;
     transition: transform 0.5s ease-in-out;
@@ -135,7 +163,7 @@ p::selection{
 #resume:hover .resume-text{
     top: 0%;
     transform: translateY(385%);
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
 }
 .resume-img img{
     border-radius: 20px 20px 0px 0px;
@@ -145,6 +173,11 @@ p::selection{
 #contact {
     grid-area: contact;
 }
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
 #phone{
     display: flex;
     gap: 10px;
@@ -153,14 +186,16 @@ p::selection{
     height: 30px;
 }
 #phone-text{
-    border-left: 2px solid;
-    height: 100%;
-    border-image: linear-gradient(to bottom, #224c56 0%, #5529A6 100%) 1;
-    padding-left: 10px;
+    border-left: 2px solid #5529A6;
+    height: 70%;
+    /* border-image: linear-gradient(to bottom, #224c56 0%, #5529A6 100%) 1; */
 }
 #mail{
-    border-left: 2px solid;
-    border-image: linear-gradient(to bottom, #224c56 0%, #5529A6 100%) 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
 }
 #social{
     grid-area: social;
