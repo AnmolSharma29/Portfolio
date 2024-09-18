@@ -40,6 +40,7 @@ body{
 .grid-hover:hover{
     border: 1px #313131 solid;
     border-radius: 20px;
+    /* box-shadow: 0px 0px 10px 5px #5529a64d */
 }
 hr{
     border-top: 2px solid;
@@ -123,6 +124,64 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 }
 #skills { 
     grid-area: skills;
+}
+#skills-data{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.skills-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+}
+.line-chart-bg{
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    border-radius: 100px;
+}
+#illustrator{
+    width: 90%;
+    height: 100%;
+    background-color: #5529A6;
+    border-radius: 100px;
+}
+#after-effects{
+    width: 50%;
+    height: 100%;
+    background-color: #5529A6;
+    border-radius: 100px;
+}
+#javascript{
+    width: 20%;
+    height: 100%;
+    background-color: #5529A6;
+    border-radius: 100px;
+}
+#cpp{
+    width: 10%;
+    height: 100%;
+    background-color: #5529A6;
+    border-radius: 100px;
+}
+#photoshop{
+    width: 60%;
+    height: 100%;
+    background-color: #5529A6;
+    border-radius: 100px;
+}
+#premiere-pro{
+    width: 30%;
+    height: 100%;
+    background-color: #5529A6;
+    border-radius: 100px;
 }
 #projects { 
     grid-area: projects;
@@ -220,6 +279,7 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
     border-radius: 1rem;
 }
 .fill-div {
+    z-index: 99 !important;
     height: 100%;
     width: 100%;
     text-decoration: none;
