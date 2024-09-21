@@ -222,6 +222,14 @@ img{
 }
 #projects { 
     grid-area: projects;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+
+.inside-div{
+    height: 100%;
+    width: 100%;
 }
 #resume {
     grid-area: resume;
