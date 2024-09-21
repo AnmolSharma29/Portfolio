@@ -56,6 +56,10 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
     color: white;
     background: #5529A6;
 }
+img{
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
 #github{ 
     grid-area: github;
     position: relative;
@@ -121,6 +125,39 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 }
 #anmol { 
     grid-area: anmol;
+    overflow: hidden;
+    position: relative;
+    gap: 20px;
+    align-items: flex-start;
+    justify-items: flex-end;
+}
+#man-in-hoodie{
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    z-index: 0;
+}
+.anmol-gradient{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+.face-logo{
+    width: 30%;    
+}
+.anmol-content{
+    z-index: 99;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0px 0px 20px 20px;
+    justify-content: flex-end;
+}
+.anmol-text h1{
+    font-size: 3rem;    
 }
 #skills { 
     grid-area: skills;
@@ -188,14 +225,13 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 }
 #resume {
     grid-area: resume;
-    border: 1px solid #301661;
     background-color: #301661;
     overflow: hidden;
     position: relative;
     padding: 15px 15px 0px 15px;
 }
 #resume:hover {
-    border: 1px solid #787878;
+    border: 1px solid #313131;
 }
 .resume-img{
     margin: 0 auto;
@@ -207,7 +243,8 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
     align-items: flex-end;
 }
 .resume-text{
-    color: #73cee5;
+    z-index: 99;
+    color: #ffffff;
     position: absolute;
     top: 0%;
     transition: transform 0.5s ease-in-out;
@@ -217,7 +254,9 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 .resume-gradient{
     height: 100%;
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    left: 0%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
 #resume:hover .resume-text{
     top: 0%;
