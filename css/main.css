@@ -475,3 +475,53 @@ img{
 #fiverr {
     grid-area: fiverr;
 }
+
+
+
+@media only screen and (max-width: 700px){
+
+    .main-area{
+        height: 198vh;
+        margin: 20px auto;
+        display: grid;
+        gap: 10px;
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "anmol"
+        "about-me"
+        "projects"
+        "skills"
+        "experience"
+        "github"
+        "contact"
+        "resume"
+        "social";
+    }
+
+    #anmol {
+        height: 20rem;   
+    }
+    #experience {
+        padding-bottom: 2rem; 
+    }
+    #skills {
+        padding-bottom: 2rem; 
+    }
+    #github { 
+        height: 10rem;    
+    }
+    .github-img{
+        width: 100%;
+    } 
+    .resume-img{
+        width: 95%;
+    } 
+    #resume{
+        height: 10rem;
+    }
+    #social{
+        height: 10rem;
+    }
+}
